@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Simon\\source\\repos\\Data_structures\\",
+  "WorkspaceRootPath": "C:\\Users\\Simon\\cpp\\Data_structures\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Linked_list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|solutionrelative:Data_structures\\Linked_list.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Linked_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|solutionrelative:Data_structures\\Linked_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Data_structures.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|C:\\Users\\Simon\\cpp\\Data_structures\\Data_structures\\Data_structures.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|solutionrelative:Data_structures\\Data_structures.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|C:\\Users\\Simon\\cpp\\Data_structures\\Data_structures\\Linked_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E0C1037E-17F7-4B63-9F79-565ED023C1D8}|Data_structures\\Data_structures.vcxproj|solutionrelative:Data_structures\\Linked_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Linked_list.cpp",
-              "DocumentMoniker": "C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Linked_list.cpp",
-              "RelativeDocumentMoniker": "Data_structures\\Linked_list.cpp",
-              "ToolTip": "C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Linked_list.cpp",
-              "RelativeToolTip": "Data_structures\\Linked_list.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Title": "Data_structures.cpp",
+              "DocumentMoniker": "C:\\Users\\Simon\\cpp\\Data_structures\\Data_structures\\Data_structures.cpp",
+              "RelativeDocumentMoniker": "Data_structures\\Data_structures.cpp",
+              "ToolTip": "C:\\Users\\Simon\\cpp\\Data_structures\\Data_structures\\Data_structures.cpp",
+              "RelativeToolTip": "Data_structures\\Data_structures.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-10-20T17:04:46.898Z",
+              "WhenOpened": "2026-10-20T23:48:18.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Linked_list.h",
-              "DocumentMoniker": "C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Linked_list.h",
+              "DocumentMoniker": "C:\\Users\\Simon\\cpp\\Data_structures\\Data_structures\\Linked_list.h",
               "RelativeDocumentMoniker": "Data_structures\\Linked_list.h",
-              "ToolTip": "C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Linked_list.h",
+              "ToolTip": "C:\\Users\\Simon\\cpp\\Data_structures\\Data_structures\\Linked_list.h",
               "RelativeToolTip": "Data_structures\\Linked_list.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-10-20T17:02:07.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Data_structures.cpp",
-              "DocumentMoniker": "C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Data_structures.cpp",
-              "RelativeDocumentMoniker": "Data_structures\\Data_structures.cpp",
-              "ToolTip": "C:\\Users\\Simon\\source\\repos\\Data_structures\\Data_structures\\Data_structures.cpp",
-              "RelativeToolTip": "Data_structures\\Data_structures.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-10-20T16:51:08.811Z",
               "EditorCaption": ""
             }
           ]

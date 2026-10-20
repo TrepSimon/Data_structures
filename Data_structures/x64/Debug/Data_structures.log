@@ -1,5 +1,2 @@
-﻿  Linked_list.cpp
-Data_structures.obj : error LNK2019: symbole externe non résolu "public: __cdecl Linked_list<int>::Linked_list<int>(void)" (??0?$Linked_list@H@@QEAA@XZ) référencé dans la fonction main
-Data_structures.obj : error LNK2019: symbole externe non résolu "public: void __cdecl Linked_list<int>::push(int)" (?push@?$Linked_list@H@@QEAAXH@Z) référencé dans la fonction main
-Data_structures.obj : error LNK2019: symbole externe non résolu "public: int & __cdecl Linked_list<int>::at(int)" (?at@?$Linked_list@H@@QEAAAEAHH@Z) référencé dans la fonction main
-C:\Users\Simon\source\repos\Data_structures\x64\Debug\Data_structures.exe : fatal error LNK1120: 3 externes non résolus
+﻿  Data_structures.cpp
+  Data_structures.vcxproj -> C:\Users\Simon\cpp\Data_structures\x64\Debug\Data_structures.exe

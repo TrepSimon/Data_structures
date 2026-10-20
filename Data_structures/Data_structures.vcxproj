@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Data_structures.cpp" />
-    <ClCompile Include="Linked_list.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Linked_list.h" />
