@@ -13,11 +13,11 @@ class Stack
 
 	void reallocate();
 	void refill(T**);
+	void allocate(T*);
 public:
 	Stack();
 	Stack(T*);
 	~Stack();
-	void allocate(T*); 
 	bool is_empty() { return current_size == 0; }
 	void push(T* data);
 	T& peek();
