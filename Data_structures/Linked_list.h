@@ -6,6 +6,7 @@ template<typename T>
 struct Node {
 	T data;
 	Node<T>* next;
+	Node<T>* previous;
 };
 
 template<typename T>
@@ -18,9 +19,14 @@ public:
 	Linked_list();
 	~Linked_list();
 	void push(T);
+	T pop();
 	T remove(int);
+	T& front();
+	T& back();
 	T& at(int);
 	int get_size() { return size; }
+	bool empty() { return size == 0; }
+	void clear();
 };
 
 template<typename T>
@@ -39,7 +45,7 @@ Linked_list<T>::~Linked_list() {
 
 template<typename T>
 void Linked_list<T>::push(T data) {
-	Node<T>* node = new Node<T>{ std::move(data), nullptr };
+	Node<T>* node = new Node<T>{ std::move(data), nullptr, nullptr };
 
 
 	if (head == nullptr) {
@@ -47,10 +53,26 @@ void Linked_list<T>::push(T data) {
 		tail = node;
 	}
 	else {
+		node->previous = tail;
 		tail->next = node;
 		tail = node;
 	}
 	size++;
+}
+
+template<typename T>
+T Linked_list<T>::pop() {
+	if (size <= 0) {
+		throw std::length_error("Liste vide");
+	}
+
+	T data = std::move(tail->data);
+	Node<T>* temp = tail;
+	tail = tail->previous;
+	tail->next = nullptr;
+	delete temp;
+	size--;
+	return data;
 }
 
 template<typename T>
@@ -67,6 +89,23 @@ T& Linked_list<T>::at(int index) {
 }
 
 template<typename T>
+T& Linked_list<T>::front() {
+	if (head == nullptr) {
+		throw std::length_error("Liste vide");
+	}
+	return head->data;
+}
+
+template<typename T>
+T& Linked_list<T>::back() {
+	if (tail == nullptr) {
+		throw std::length_error("Liste vide");
+	}
+
+	return tail->data;
+}
+
+template<typename T>
 T Linked_list<T>::remove(int index) {
 	if (index < 0 || index >= size) {
 		throw std::out_of_range("index invalide");
@@ -79,6 +118,11 @@ T Linked_list<T>::remove(int index) {
 		previous = current;
 		current = current->next;
 	}
+
+	if (current->next != nullptr) {
+		current->next->previous = previous;
+	}
+
 	if (previous == nullptr) {
 		head = current->next;
 	}
@@ -92,6 +136,14 @@ T Linked_list<T>::remove(int index) {
 	delete current;
 	size--;
 	return data;
+}
+
+template<typename T>
+void Linked_list<T>::clear() {
+	while (head != nullptr) {
+		remove(0);
+	}
+	
 }
 
 

@@ -8,8 +8,18 @@ int main()
 
     list.push(15);
     list.push(33);
+    list.push(22);
 
+    //std::cout << list.pop() << std::endl;
+
+    std::cout << list.remove(1) << std::endl;
+
+    std::cout << list.at(0) << std::endl;
     std::cout << list.at(1) << std::endl;
 
-    std::cout << list.remove(0) << std::endl;
+    std::cout << list.pop() << std::endl;
+
+    list.clear();
+
+    list.front();
 }
