@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Linked_list.h"
 #include "Stack.h"
+#include "Queue.h"
 
 void test_linked_list() {
     Linked_list<int> list = Linked_list<int>();
@@ -39,8 +40,23 @@ void test_stack() {
     std::cout << stack.peek() << std::endl;
 }
 
+void test_queue() {
+    Queue<int> q = Queue<int>();
+
+    q.enqueue(-1);
+
+    std::cout << q.dequeue() << std::endl;
+
+    for (int idx = 0; idx < 25; idx++) {
+        q.enqueue(idx);
+        std::cout << q.get_front() << std::endl;
+    }
+
+    std::cout << q.dequeue() << std::endl;
+    std::cout << q.get_front();
+}
+
 int main()
 {
-    test_stack();
-    test_linked_list();
+    test_queue();
 }
