@@ -6,27 +6,27 @@
 template<typename T>
 class Stack
 {
-	T** base_ptr;
-	T** stack_ptr;
+	T* base_ptr;
+	T* stack_ptr;
 	int max_size = 20;
 	int current_size = 0;
 
 	void reallocate();
-	void refill(T**);
-	void allocate(T*);
+	void refill(T*);
+	void allocate(T);
 public:
 	Stack();
-	Stack(T*);
+	Stack(T);
 	~Stack();
 	bool is_empty() { return current_size == 0; }
-	void push(T* data);
+	void push(T data);
 	T& peek();
 	void clear();
 };
 
 template<typename T>
-void Stack<T>::allocate(T* data) {
-	base_ptr = (T**)malloc(sizeof(T*) * max_size);
+void Stack<T>::allocate(T data) {
+	base_ptr = (T*)malloc(sizeof(T) * max_size);
 
 	if (base_ptr == nullptr) {
 		throw std::bad_alloc();
@@ -40,7 +40,7 @@ template<typename T>
 Stack<T>::Stack() : base_ptr(nullptr), stack_ptr(nullptr){}
 
 template<typename T>
-Stack<T>::Stack(T* data) {
+Stack<T>::Stack(T data) {
 	allocate(data);
 }
 
@@ -58,9 +58,9 @@ Stack<T>::~Stack() {
 }
 
 template<typename T>
-void Stack<T>::refill(T** new_base) {
-	T** ptr = base_ptr;
-	T** top = base_ptr;
+void Stack<T>::refill(T* new_base) {
+	T* ptr = base_ptr;
+	T* top = base_ptr;
 
 	for (auto head = new_base; ptr <= stack_ptr; head++, ptr++) {
 		*head = *ptr;
@@ -74,12 +74,12 @@ template<typename T>
 void Stack<T>::reallocate() {
 	max_size = max_size << 1;
 
-	T** tempBase = (T**)malloc(sizeof(T*) * max_size);
+	T* tempBase = (T*)malloc(sizeof(T) * max_size);
 	refill(tempBase);
 }
 
 template<typename T>
-void Stack<T>::push(T* data) {
+void Stack<T>::push(T data) {
 	if (stack_ptr - base_ptr > max_size) {
 		reallocate();
 	}
@@ -99,7 +99,7 @@ T& Stack<T>::peek() {
 	if (is_empty()) {
 		throw std::out_of_range("Liste vide");
 	}
-	return **stack_ptr;
+	return *stack_ptr;
 }
 
 

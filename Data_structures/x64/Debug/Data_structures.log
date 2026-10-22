@@ -1,2 +1,3 @@
 ﻿  Data_structures.cpp
+C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(138,1): warning C4172: retour de l’adresse de la variable locale ou temporaire : data
   Data_structures.vcxproj -> C:\Users\Simon\source\repos\Data_structures\x64\Debug\Data_structures.exe

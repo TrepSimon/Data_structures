@@ -9,9 +9,9 @@ void test_linked_list() {
     int y = 33;
     int z = 22;
 
-    list.push(&x);
-    list.push(&y);
-    list.push(&z);
+    list.push(x);
+    list.push(y);
+    list.push(z);
 
     //std::cout << list.pop() << std::endl;
 
@@ -31,8 +31,7 @@ void test_stack() {
     int y = 20;
 
     for (int idx = 0; idx < 25; idx++) {
-        int* z = (int*)malloc(sizeof(int));
-        *z = idx;
+        int z = idx;
         stack.push(z);
     }
     
@@ -43,5 +42,5 @@ void test_stack() {
 int main()
 {
     test_stack();
-
+    test_linked_list();
 }

@@ -5,23 +5,23 @@
 template<typename T>
 class Queue
 {
-	T** front;
-	T** back;
+	T* front;
+	T* back;
 	int max_size = 20;
 	int current_size = 0;
 
-	void allocate(T*);
+	void allocate(T);
 public:
 	Queue();
-	Queue(T*);
+	Queue(T);
 	~Queue();
 	void clear();
-	void enqueue(T*);
+	void enqueue(T);
 };
 
 template<typename T>
-void Queue<T>::allocate(T* Data) {
-	back = (T**)malloc(sizeof(T*) * max_size);
+void Queue<T>::allocate(T Data) {
+	back = (T*)malloc(sizeof(T) * max_size);
 
 	if (back == nullptr)throw std::bad_alloc();
 
@@ -41,7 +41,7 @@ template<typename T>
 Queue<T>::Queue() : front(nullptr), back(nullptr) {}
 
 template<typename T>
-Queue<T>::Queue(T* data) {
+Queue<T>::Queue(T data) {
 	allocate(data);
 }
 
@@ -51,7 +51,7 @@ Queue<T>::~Queue() {
 }
 
 template<typename T>
-void Queue<T>::enqueue(T* data) {
+void Queue<T>::enqueue(T data) {
 
 }
 
