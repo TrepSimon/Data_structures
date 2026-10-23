@@ -139,9 +139,11 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Binary_tree.cpp" />
     <ClCompile Include="Data_structures.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Binary_tree.h" />
     <ClInclude Include="Linked_list.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
