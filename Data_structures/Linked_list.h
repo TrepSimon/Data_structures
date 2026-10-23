@@ -19,6 +19,7 @@ public:
 	Linked_list();
 	~Linked_list();
 	void push(T);
+	void insert(int, T);
 	T& pop();
 	T& remove(int);
 	T& front();
@@ -27,6 +28,8 @@ public:
 	int get_size() { return size; }
 	bool empty() { return size == 0; }
 	void clear();
+	void print();
+	int index_of(T);
 };
 
 template<typename T>
@@ -146,4 +149,43 @@ void Linked_list<T>::clear() {
 	
 }
 
+template<typename T>
+void Linked_list<T>::insert(int index, T data) {
+	if (index < 0 || index > size)throw std::out_of_range("index a l'exterieur de la liste");
+	if (index == size) {
+		push(data);
+		return;
+	}
 
+	Node<T>* iter = head;
+	for (int idx = 0; idx < index; idx++) {
+		iter = iter->next;
+	}
+
+	Node<T>* node = new Node<T>{ std::move(data), iter, iter->previous };
+	if(iter->previous != nullptr)iter->previous->next = node;
+	iter->previous = node;
+
+	if (head->previous != nullptr)head = head->previous;
+	size++;
+}
+
+template<typename T>
+void Linked_list<T>::print() {
+	for (auto iter = head; iter != nullptr; iter = iter->next) {
+		if (iter == head) std::cout << iter->data;
+		else std::cout << "->" << iter->data;
+	}
+	std::cout << std::endl;
+}
+
+template<typename T>
+int Linked_list<T>::index_of(T data) {
+	auto iter = head;
+
+	for (int idx = 0; idx < size; idx++) {
+		if (iter->data == data)return idx;
+		iter = iter->next;
+	}
+	return -1;
+}

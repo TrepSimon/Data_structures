@@ -22,6 +22,16 @@ void test_linked_list() {
 
     list.at(0) = 10;
 
+    list.print();
+
+    std::cout << list.index_of(22) << std::endl;
+
+    list.insert(1, 44);
+
+    std::cout << list.index_of(225) << std::endl;
+
+    list.print();
+
     std::cout << list.at(0) << std::endl;
     list.back() = 3; 
 }
@@ -58,5 +68,6 @@ void test_queue() {
 
 int main()
 {
-    test_queue();
+    test_linked_list();
+    //test_queue();
 }
