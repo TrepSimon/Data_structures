@@ -3,6 +3,7 @@
 #include "Linked_list.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "List.h"
 
 void test_linked_list() {
     Linked_list<int> list = Linked_list<int>();
@@ -66,8 +67,23 @@ void test_queue() {
     std::cout << q.get_front();
 }
 
+void test_list() {
+    auto list = List<int>();
+
+    list.add(12);
+    list.add(22);
+    list.add(44);
+
+    std::cout << list.get_at(0) << std::endl;
+
+    std::cout << list.size() << "\n" << list.remove_at(1) << "\n" << list.size() << std::endl;
+    std::cout << list.remove(12) << "\n" << list.size() << std::endl;
+
+    list.insert(1, 33);
+    std::cout << list.get_at(1) << std::endl;
+}
+
 int main()
 {
-    test_linked_list();
-    //test_queue();
+    test_list();
 }

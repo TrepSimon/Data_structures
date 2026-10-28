@@ -3,11 +3,11 @@ C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(30,6): warni
   (compiler le fichier source 'Data_structures.cpp')
       C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(30,6):
       le contexte d’instanciation du modèle (le plus ancien) est
-          C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(54,16):
+          C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(55,16):
           voir la référence à l'instanciation classe modèle 'Queue<int>' en cours de compilation
           C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(71,19):
           pendant la compilation de la fonction membre classe modèle 'Queue<int>::Queue(void)'
-              C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(54,18):
+              C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(55,18):
               voir la première référence à « Queue<int>::Queue » dans « test_queue »
           C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(29,32):
           pendant la compilation de la fonction membre classe modèle 'void Queue<int>::refill(T *)'
@@ -17,9 +17,11 @@ C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(30,6): warni
           ]
               C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(93,29):
               voir la première référence à « Queue<int>::refill » dans « Queue<int>::enqueue »
-              C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(56,14):
+              C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(57,14):
               voir la première référence à « Queue<int>::enqueue » dans « test_queue »
   
-C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(141,1): warning C4172: retour de l’adresse de la variable locale ou temporaire : data
+  List.cpp
+  Génération de code en cours...
 C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(110,1): warning C4172: retour de l’adresse de la variable locale ou temporaire : data
+C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(141,1): warning C4172: retour de l’adresse de la variable locale ou temporaire : data
   Data_structures.vcxproj -> C:\Users\Simon\source\repos\Data_structures\x64\Debug\Data_structures.exe

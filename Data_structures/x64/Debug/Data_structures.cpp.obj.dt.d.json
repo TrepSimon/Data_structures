@@ -130,7 +130,8 @@
             "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\ostream",
             "c:\\users\\simon\\source\\repos\\data_structures\\data_structures\\linked_list.h",
             "c:\\users\\simon\\source\\repos\\data_structures\\data_structures\\stack.h",
-            "c:\\users\\simon\\source\\repos\\data_structures\\data_structures\\queue.h"
+            "c:\\users\\simon\\source\\repos\\data_structures\\data_structures\\queue.h",
+            "c:\\users\\simon\\source\\repos\\data_structures\\data_structures\\list.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
