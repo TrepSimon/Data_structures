@@ -1,6 +1,8 @@
 #pragma once
 #include <stdexcept>
 #include <utility>
+#include <iterator>
+#include <cstddef>
 
 template<typename T>
 struct Node {
@@ -16,6 +18,36 @@ class Linked_list
 	Node<T>* head;
 	int size;
 public:
+	struct Iterator {
+		using iterator_category = std::forward_iterator_tag;
+		using difference_type = std::ptrdiff_t;
+		using value_type = T;
+		using pointer = value_type*;
+		using reference = T&;
+
+		Iterator(Node<T>* ptr, Node<T>* last) : m_ptr(ptr), m_tail(last) {}
+
+		reference operator*() const { return m_ptr->data; }
+		pointer operator->() const { return &m_ptr->data; }
+
+		Iterator& operator++() { m_ptr = m_ptr->next; return *this; }
+		Iterator& operator--() {
+			if (m_ptr == nullptr)m_ptr = m_tail;
+			else m_ptr = m_ptr->previous;
+			return *this;
+		}
+
+		Iterator operator++(int) { Iterator tmp = *this; ++(*this); return tmp; }
+		Iterator operator--(int) { Iterator tmp = *this; --(*this); return tmp; }
+
+		friend bool operator==(const Iterator& a, const Iterator& b) { return a.m_ptr == b.m_ptr; };
+		friend bool operator!=(const Iterator& a, const Iterator& b) { return !(a == b); };
+
+	private:
+		Node<T>* m_ptr;
+		Node<T>* m_tail;
+	};
+
 	Linked_list();
 	~Linked_list();
 	void push(T);
@@ -30,6 +62,14 @@ public:
 	void clear();
 	void print();
 	int index_of(T);
+
+	using ReverseIterator = std::reverse_iterator<Iterator>;
+
+	Iterator begin() { return Iterator(head, tail); }
+	Iterator end() { return Iterator(nullptr, tail); }
+
+	ReverseIterator rBegin() { return ReverseIterator(end()); }
+	Iterator rEnd() { return ReverseIterator(begin()); }
 };
 
 template<typename T>

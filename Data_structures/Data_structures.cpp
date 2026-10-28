@@ -35,6 +35,16 @@ void test_linked_list() {
 
     std::cout << list.at(0) << std::endl;
     list.back() = 3; 
+
+    list.clear();
+
+    for (int idx = 0; idx < 25; idx++) {
+        list.push(idx);
+    }
+    
+    for (auto i : list) {
+        std::cout << &i << std::endl;
+    }
 }
 
 void test_stack() {
@@ -81,9 +91,30 @@ void test_list() {
 
     list.insert(1, 33);
     std::cout << list.get_at(1) << std::endl;
+
+    list.clear();
+
+    for (int idx = 0; idx < 25; idx++) {
+        list.add(idx);
+    }
+
+    std::cout << "\n\n\n\n";
+
+    for (auto i : list) {
+        std::cout << i << std::endl;
+    }
+
+
+    std::cout << "\n\n\n\n";
+    auto end = list.rEnd();
+
+    for (auto it = list.rBegin(); it != end; it--) {
+        std::cout << *it << std::endl;
+    }
 }
 
 int main()
 {
-    test_list();
+    //test_list();
+    test_linked_list();
 }

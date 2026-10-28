@@ -1,27 +1,30 @@
 ﻿  Data_structures.cpp
-C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(30,6): warning C4101: 'idx' : variable locale non référencée
+C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,34): error C2440: '<function-style-cast>' : impossible de convertir de 'nullptr' en 'Linked_list<int>::Iterator'
   (compiler le fichier source 'Data_structures.cpp')
-      C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(30,6):
+      C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,34):
+      'Linked_list<int>::Iterator::Iterator' : aucune fonction surchargée n’a pu convertir tous les types d’arguments.
+          C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(49,2):
+          est peut-être 'Linked_list<int>::Iterator::Iterator(Linked_list<int>::Iterator &&)'
+              C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,34):
+              'Linked_list<int>::Iterator::Iterator(Linked_list<int>::Iterator &&)' : impossible de convertir l'argument 1 de 'nullptr' en 'Linked_list<int>::Iterator &&'
+                  C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,35):
+                  Raison : impossible de convertir de 'nullptr' en 'Linked_list<int>::Iterator'
+          C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(49,2):
+          ou       'Linked_list<int>::Iterator::Iterator(const Linked_list<int>::Iterator &)'
+              C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,34):
+              'Linked_list<int>::Iterator::Iterator(const Linked_list<int>::Iterator &)' : impossible de convertir l'argument 1 de 'nullptr' en 'const Linked_list<int>::Iterator &'
+                  C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,35):
+                  Raison : impossible de convertir de 'nullptr' en 'const Linked_list<int>::Iterator'
+          C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,34):
+          lors de la tentative de mise en correspondance de la liste des arguments '(nullptr)'
+      C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,34):
       le contexte d’instanciation du modèle (le plus ancien) est
-          C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(55,16):
-          voir la référence à l'instanciation classe modèle 'Queue<int>' en cours de compilation
-          C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(71,19):
-          pendant la compilation de la fonction membre classe modèle 'Queue<int>::Queue(void)'
-              C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(55,18):
-              voir la première référence à « Queue<int>::Queue » dans « test_queue »
-          C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(29,32):
-          pendant la compilation de la fonction membre classe modèle 'void Queue<int>::refill(T *)'
-          with
-          [
-              T=int
-          ]
-              C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(93,29):
-              voir la première référence à « Queue<int>::refill » dans « Queue<int>::enqueue »
-              C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(57,14):
-              voir la première référence à « Queue<int>::enqueue » dans « test_queue »
+          C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(9,22):
+          voir la référence à l'instanciation classe modèle 'Linked_list<int>' en cours de compilation
+          C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(69,11):
+          pendant la compilation de la fonction membre classe modèle 'Linked_list<int>::Iterator Linked_list<int>::end(void)'
+              C:\Users\Simon\source\repos\Data_structures\Data_structures\Data_structures.cpp(45,19):
+              voir la première référence à « Linked_list<int>::end » dans « test_linked_list »
   
   List.cpp
   Génération de code en cours...
-C:\Users\Simon\source\repos\Data_structures\Data_structures\Queue.h(110,1): warning C4172: retour de l’adresse de la variable locale ou temporaire : data
-C:\Users\Simon\source\repos\Data_structures\Data_structures\Linked_list.h(141,1): warning C4172: retour de l’adresse de la variable locale ou temporaire : data
-  Data_structures.vcxproj -> C:\Users\Simon\source\repos\Data_structures\x64\Debug\Data_structures.exe
